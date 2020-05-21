@@ -9,7 +9,7 @@ public class Toolbox : Singleton<Toolbox>
     public static void Add(object obj)
     {
         var add = obj;
-        var manager = abj as ManagerBase;
+        var manager = obj as ManagerBase;
 
         if (manager != null)
         {
@@ -25,6 +25,13 @@ public class Toolbox : Singleton<Toolbox>
         if (add is IAwake)
         {
             (add is IAwake).OnAwake;
+        }
+
+        public static T Get<T>()
+        {
+            object resolve;
+            Instance.data.TryToGetValue(typeof(T), out resolve);
+            return (T)resolve;
         }
     }
 }

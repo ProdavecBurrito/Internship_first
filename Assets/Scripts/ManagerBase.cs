@@ -1,3 +1,6 @@
-﻿internal class ManagerBase
+﻿using UnityEngine;
+
+public abstract class ManagerBase : ScriptableObject
 {
+
 }
