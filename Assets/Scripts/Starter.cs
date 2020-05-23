@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Класс для хранения менеджеров
+/// </summary>
 public class Starter : MonoBehaviour
 {
     [SerializeField]

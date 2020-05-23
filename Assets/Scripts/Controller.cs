@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// Синглтон
+/// </summary>
 namespace InstrumentsForUnity
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        T instance; 
+        static T instance; 
 
-        T _instance
+        public static T Instance
         {
             get
             {
