@@ -24,14 +24,19 @@ public class Toolbox : Singleton<Toolbox>
 
         if (add is IAwake)
         {
-            (add is IAwake).OnAwake;
+            (add as IAwake).OnAwake();
         }
+    }
 
-        public static T Get<T>()
-        {
-            object resolve;
-            Instance.data.TryToGetValue(typeof(T), out resolve);
-            return (T)resolve;
-        }
+    public static T Get<T>()
+    {
+        object resolve;
+        Instance.data.TryGetValue(typeof(T), out resolve);
+        return (T)resolve;
+    }
+
+    public void ClearScene()
+    {
+
     }
 }

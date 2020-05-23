@@ -6,10 +6,9 @@ using UnityEngine;
 /// </summary>
 public class Starter : MonoBehaviour
 {
-    [SerializeField]
-    List<ManagerBase> managers = new List<ManagerBase>();
+    public List<ManagerBase> managers = new List<ManagerBase>();
 
-    private void Awake()
+    void Awake()
     {
         foreach(var managerBase in managers)
         {

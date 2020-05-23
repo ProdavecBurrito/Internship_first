@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+/// <summary>
+/// Синглтон
+/// </summary>
+namespace InstrumentsForUnity
+{
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        
+        static T instance; 
+
+        public static T Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = FindObjectOfType<T>();
+                    if (instance == null)
+                    {
+                        var singleton = new GameObject("SINGLETON" + typeof(T));
+                        instance = singleton.AddComponent<T>();
+                        DontDestroyOnLoad(singleton);
+                    }
+                }
+                return instance;
+            }
+        }
     }
 }
