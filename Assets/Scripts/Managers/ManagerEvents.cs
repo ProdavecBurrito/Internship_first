@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ManagerEvenst", menuName = "Managers/ManagerEvenst")]
-public class ManagerEvents : MonoBehaviour
+public class ManagerEvents : ManagerBase
 {
     public GameObject prefab;
 

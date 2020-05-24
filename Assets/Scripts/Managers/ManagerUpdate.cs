@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ManagerUpdate", menuName = "Manager/ManagerUpdate")]
+[CreateAssetMenu(fileName = "ManagerUpdate", menuName = "Managers/ManagerUpdate")]
 public class ManagerUpdate : ManagerBase, IAwake
 {
     List<ITick> ticks = new List<ITick>();
