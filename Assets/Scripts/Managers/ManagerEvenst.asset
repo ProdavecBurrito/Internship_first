@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085475148faff8c429bcb9131c62fc90, type: 3}
   m_Name: ManagerEvenst
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 3724227626420843588, guid: a7ea0582b052ed14ba3214fc805e6e5c, type: 3}
